@@ -111,10 +111,10 @@ def comment():
 	updated_at) VALUES (:user_id, :message_id, \
 	:comment, NOW(), NOW())"
 	data = {
-				'user_id': session['user_id'],
-				'message_id': message_id,
-				'comment': comment
-				}
+			'user_id': session['user_id'],
+			'message_id': message_id,
+			'comment': comment
+			}
 	mysql.query_db(insert_query, data)
 	return redirect('/wall')
 
