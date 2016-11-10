@@ -55,7 +55,6 @@ def create():
 				}
 	user_id = mysql.query_db(insert_query, query_data)
 	session['user_id'] = int(user_id)
-	session['first_name'] = first_name
 	return redirect('/wall')
 
 
