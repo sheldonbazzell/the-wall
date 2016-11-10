@@ -1,0 +1,306 @@
+body{
+	background-color: #788A38;
+}
+
+.login-head-reg, .login-head-log {
+	display: inline-block;
+	vertical-align: top;
+	font-weight: lighter;
+	margin: 1.2px 0px 0px 0px;
+}
+
+.button-loga {
+	background-color: lightgrey;
+	color: black;
+	padding: 6px 10px;
+	font-size: 12px;
+	opacity: .6;
+	border: 1px solid black;
+	border-radius: 3.5px;
+}
+
+.button-loga2 {
+	background-color: lightgrey;
+	color: black;
+	padding: 6px 10px;
+	font-size: 12px;
+	border: 1px solid black;
+	border-radius: 3.5px;
+}
+
+.button-logb {
+	background-color: lightgrey;
+	color: black;
+	padding: 6px 15px;
+	font-size: 12px;
+	border: 1px solid black;
+	border-radius: 3.5px;
+}
+
+.button-logb2 {
+	background-color: lightgrey;
+	color: black;
+	opacity: .6;
+	padding: 6px 15px;
+	font-size: 12px;
+	border: 1px solid black;
+	border-radius: 3.5px;
+}
+
+
+
+header{
+	border-top: 2.5px solid black;
+	border-left: 2.5px solid black;
+	border-right: 2.5px solid black;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	width: 90%;
+	margin: 60px auto 0px;
+	background-color: white;
+	padding: 15px 25px 15px 25px;
+}
+
+.wall, .welcome, .button2, .logout {
+	display: inline-block;
+}
+
+.wall {
+	margin-left: 1%;
+}
+
+.welcome {
+	margin-left: 55%;
+}
+
+.head {
+	padding: 10px 16px 15px -10px;
+	width: 380px;
+	font-size: 25px;
+	background-color: #eee;
+	border-bottom: 1.5px solid black;
+}
+
+.head2 {
+	margin: 20px auto;
+	width: 440px;
+	font-size: 25px;
+	background-color: #eee;
+	border: 1.5px solid black;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.container {
+	width: 400px;
+	height: auto;
+	margin: 100px auto;
+	background-color: white;
+	border: 1.5px solid black;
+	border-radius: 5px;
+	padding: 0px 0px 0px 25px;
+}
+
+.container2 {
+	width: 180px;
+	height: 330px;
+	background-color: #788A38;
+	margin: 150px auto 10px auto;
+	border-radius: 5px;
+	padding: 0px 20px 0px 20px;
+}
+
+.login-body {
+	margin: 0px auto 10px auto;
+	background-color: white;
+	border: 1.5px solid black;
+	border-radius: 5px;
+	display: none;
+	padding: 10px 25px 0px 25px;
+}
+
+.reg-body {
+	margin: 0px auto 10px auto;
+	background-color: white;
+	border: 1.5px solid black;
+	border-radius: 5px;
+	padding: 10px 25px 0px 25px;
+}
+
+.container3 {
+	width: 90%;
+	height: auto;
+	margin: 0px auto;
+	background-color: white;
+	border: 2.5px solid black;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 25px 25px 50px 25px;
+}
+
+#submit {
+	margin-left: 60%;
+	margin-top: 15px;
+}
+
+.flash1 {
+	padding: 6px;
+	background-color: red;
+	color: white;
+	width: auto;
+	font-size: 13px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.flash2 {
+	padding: 6px;
+	background-color: red;
+	color: white;
+	width: 100px;
+	font-size: 13px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.message, .add {
+	display: inline-block;
+}
+
+.message {
+	width: 80px;
+	height: auto;
+}
+
+.button {
+	background-color: lightgrey;
+	color: black;
+}
+
+.button2 {
+	background-color: lightgrey;
+	color: black;
+	margin-left: 90px
+}
+
+.button3, .del-form{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.button3 {
+	background-color: lightgrey;
+	color: black;
+	margin-top: 0px;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+h2 {
+	margin-bottom: 15px;
+}
+
+.msg-cmt {
+	border-radius: 5px;
+	padding-top: 8px;
+	border-left: 1.5px solid black;
+	border-right: 1.5px solid black;
+	border-top: 1.5px solid black;
+	border: 2px solid black;
+}
+
+.msg-head {
+	margin-left: 7.5%;
+	margin-bottom: 5px;
+}
+
+.like {
+	background-color: #49639E;
+	color: white;
+	margin-right: 7px;
+	border-radius: 4px;
+}
+
+.msg-head2 {
+	margin: 0px 0px 5px 16%;
+}
+
+.msg-box {
+	width: 85%;
+	height: 80px;
+	margin-left: 7.5%;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+
+.new-msg2 {
+	border-bottom: 1.75px solid black;
+}
+
+.post {
+	margin-left: 86.5%;
+}
+
+.comment-box {
+	width: 65%;
+	height: 50px;
+	margin-left: 16%;
+	border-radius: 5px;
+	border: 1.75px solid black;
+}
+
+.post2 {
+	margin-left: 74.8%;
+}
+
+.board {
+	width: 85%;
+	margin: 10px 0px 5px 7.5%;
+}
+
+.board2 {
+	width: 70%;
+	margin: 10px 0px 5px 14.5%;
+}
+
+.posted-by {
+	margin: 0px 0px 5px 0px;
+}
+
+.posted-by2 {
+	margin: 0px 0px 5px 0px;
+	font-size: 15px;
+}
+
+.content {
+	margin: 5px 0px 5px 0px;
+}
+
+.content2 {
+	margin: 5px 0px 5px 0px;
+	font-size: 15px;
+}
+
+.r-u-sure {
+	display: none;
+}
+
+input {
+	display: block;
+	margin: 4px 0px 8px 0px;
+	border: 1.5px solid black;
+	border-radius: 3.5px;
+}
+
+#time {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 1.5px 0px 0px 20px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+#again {
+	margin-left: 20px;
+	font-size: 12px;
+}

@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Login and Resigration</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.log-email').focus();
+
+      $('.button-logb').click(function(){
+        $(this).css('opacity', '1');
+        $('.button-loga').css('opacity', '.6');
+      });
+
+      $('.button-loga').click(function(){
+        $('.button-loga').css('opacity', '1');
+        $('.button-logb').css('opacity', '.6');
+      });
+
+      $(document).on('click', '.button-logb', function(){
+        $('.login-body').hide();
+        $('.reg-body').show();
+        $('.log-email').focus();
+      });
+
+      $(document).on('click', '.button-loga', function(){
+        $('.reg-body').hide();
+        $('.login-body').show();
+        $('.first_name').focus();
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div class="container2">
+    <div class="login-head"><h3 class="login-head-log"><button class="button-logb">Login</button></h3><h3 class="login-head-reg"><button class="button-loga">Register</button></h3></div>
+    <div class="login-body">
+    {% with messages = get_flashed_messages(category_filter=['message']) %}
+      {% if messages %}
+        {% for message in messages %}
+          <p class="flash1">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+      <form action="/register" method="POST">
+        First Name: <input type="text" class="first_name" name="first_name">
+        Last Name: <input type="text" name="last_name">
+        Email: <input type="text" name="email">
+        Password: <input type="password" name="password">
+        Confirm Password: <input type="password" name="confirm">
+        <input type="submit" value="Register">
+      </form>
+    </div>
+    <div class="reg-body">
+      {% with errors = get_flashed_messages(category_filter=['error']) %}
+        {% if errors %}
+          {% for message in errors %}
+             <p class="flash1">{{ message }}</p>
+           {% endfor %}
+        {% endif %}
+        {% endwith %}
+      <form action="/login" method="POST">
+        Email: <input type="text" class="log-email" name="email">
+        Password: <input type="password" name="password">
+        <input type="submit" value="Login">
+      </form>
+    </div> 
+  </div>
+</body>
+</html>
