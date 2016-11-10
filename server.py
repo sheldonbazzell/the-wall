@@ -24,18 +24,18 @@ def create():
 		valid = False
 	if len(request.form['last_name']) < 2:
 		flash(u"Last name is required" ,'message')
-		return redirect('/')
+		valid = False
 	if not EMAIL_REGEX.match(request.form['email']):
 		flash(u"Please enter a valid email", 'message')
-		return redirect('/')
+		valid = False
 	if len(request.form['password']) < 8:
 		flash(u"Password must be 8+ characters \
-			and contain 1 uppercase letter and 1 number.", 'message')
-		return redirect('/')
+		and contain 1 uppercase letter and 1 number.", 'message')
+		valid = False
 	if not PASSWORD_REGEX.match(request.form['password']):
 		flash(u"Password must be 8+ characters \
-			and contain 1 uppercase letter and 1 number.", 'message')
-		return redirect('/')
+		and contain 1 uppercase letter and 1 number.", 'message')
+		valid = False
 	if not valid: 
 		return redirect('/')
 	first_name = request.form['first_name']
@@ -151,8 +151,13 @@ def wall():
 		ON users.id = comments.user_id \
 		ORDER BY comments.created_at"
 		comments = mysql.query_db(query_cmt)
+		query_user = "SELECT first_name FROM users WHERE id = :id"
+		data = {'id': session['user_id']}
+		user = mysql.query_db(query_user, data)
 		return render_template('profile.html', \
-		messages=messages, comments=comments)
+		messages=messages, comments=comments, user=user)
+		
+
 	return redirect('/')
 
 

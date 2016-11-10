@@ -17,7 +17,9 @@
 <body>
   <header>
   	<h1 class="wall">Coding Dojo Wall</h1>
-		<h1 class="welcome">Welcome {{session.first_name}}!</h1>
+  		{% for user in user %}
+			<h1 class="welcome">Welcome {{ user['first_name'] }}!</h1>
+  		{% endfor %}
     <form action="/" class="logout"><input type="submit" value="Log Off" class="button2"></form>
   </header>
   <div class="container3">
