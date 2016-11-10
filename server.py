@@ -71,7 +71,6 @@ def login():
 		return redirect('/')
 	if bcrypt.check_password_hash(user[0]['pw_hash'], password):
 		session['user_id'] = int(user[0]['id'])
-		session['first_name'] = user[0]['first_name']
 		return redirect('/wall')
 	else:
 		flash(u'Invalid password.', 'error')
@@ -81,7 +80,6 @@ def login():
 @app.route('/logout')
 def logout():
 	session.pop('user_id', None)
-	session.pop('first_name', None)
 	return redirect('/')
 
 
@@ -156,8 +154,6 @@ def wall():
 		user = mysql.query_db(query_user, data)
 		return render_template('profile.html', \
 		messages=messages, comments=comments, user=user)
-		
-
 	return redirect('/')
 
 
